@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+</html>
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+	<title>Alarm</title>
+	<link href="./alarm.css" type="text/css" rel="stylesheet">
+</head>
+
+
+<body>
+	<h1>
+		<img id="logo" src="./timer.gif" width="150px" height="150px" alt="UW CSE logo">
+		Timer Alarm
+	</h1>
+
+	<div > 
+		<input id="min" type="text"> min
+	</div>
+
+	<div>
+		<input id="sec" type="text"> sec
+	</div>
+
+	<div>
+	<button id="go" onclick="runtimer()" >Go</button>
+	</div>
+
+	<div id="display">
+
+</body>
+<script>
+function runtimer()
+{
+
+	let xyz=document.getElementById("sec").value;
+	  setTimeout(()=>{
+
+    document.getElementById("display").innerHTML=changeBackground('red')
+	  },xyz)
+}
+function changeBackground(color) {
+  document.body.style.background = color;
+}
+function countDown(){
+	
+}
+window.addEventListener("load",function() { changeBackground('white') });
+
+</script>
+
+</html>
